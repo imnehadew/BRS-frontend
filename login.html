@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" type="text/css" href="./account.css">
+</head>
+<body>
+    <!-- <div class="toggle_container">
+        Log in
+        <input type="checkbox" id="switch" checked/><label for="switch">Toggle</label>
+        Sign up
+      </label>
+    </div> -->
+  <div class="container" id="login">
+    <h2>Log In</h2>
+    <form id="login-form">
+      <input type="text" placeholder="Email" id="username" required>
+      <input type="password" placeholder="Password" id="psw" required>
+      <input type="button" value="Login" onclick="handleLogin()">
+    </form>
+    <div class="switch-form">
+      <span 
+        onclick="window.location.href='signup.html'"
+      >Create an account</span>
+    </div>
+  </div>
+   
+    <!-- Please add Footer Here  -->
+
+</body>
+<script>
+    const username = document.getElementById("username");
+    const password = document.getElementById("psw");
+    const loginBtn = document.getElementById("loginBtn");
+    const baseDomain = "http://localhost:8000/api";
+    const loginUrl = baseDomain + "/login";
+    const registerUrl = baseDomain + "/signup";
+    const HomeUrl = "project.html";
+    const usernameRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+
+    const handleLogin = () => {
+        // e.preventDefault();
+        if (username.value === "" || password.value === "") {
+            alert("Please fill all the fields");
+            return;
+        }  else if ( !usernameRegex.test(username.value) ) {
+            alert("Please enter a valid username");
+            return;
+        }
+        const data = {
+            username: username.value,
+            password: password.value
+        }
+        fetch(loginUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data),
+        })
+        .then(res => res.json())
+        .then(res => {
+            console.log(res);
+            if (res.status === "success") {
+                localStorage.setItem("token", res.access);
+                localStorage.setItem("refresh", res.refresh);
+                window.location.href = HomeUrl
+            } else {
+                alert(res.error);
+            }
+        })
+        .catch(err => {
+            console.log(err)
+            alert("Something went wrong");
+        });
+    }
+ 
+</script>
+</html>

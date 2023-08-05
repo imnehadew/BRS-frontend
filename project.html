@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation system</title>
+    <link rel="stylesheet" href="./project.css">
+    <script src="https://kit.fontawesome.com/0a85317b2a.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <nav class="bar-1">
+        <i class="fa-solid fa-circle" style="color: #11ee2a;"></i>
+        <i class="fa-solid fa-circle" style="color: #220ad6;"></i>
+        <i class="fa-solid fa-circle" style="color: #d6180a;"></i>
+
+    </nav>
+    <!-- Navigation Bar Section -->
+
+    <nav class="bar">
+        <div class="logo">
+            <h1 class="main">Bookie</h1>
+            <h2 class="second">Just another wordpress site</h6>
+
+
+        </div>
+
+        <div class="optn">
+            <li><a href="project.html">Home</a></li>
+            <li><a href="project.html">BookStore</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li id="authBtn">
+                <a href="login.html">Log in</a>
+            </li>
+
+        </div>
+    </nav>
+
+    <!-- Ending of Navigation Bar Section -->
+
+
+    <!-- Home section Section -->
+
+    <section class="home">
+
+        <div class="main-1-container">
+
+
+
+            <div class="home-container">
+                <div class="left-container">
+                    <h2 class="fourth">Reading is the best for get idea</h2>
+                    <h1 class="third">Keep Reading</h1>
+                </div>
+                <div class="right-container">
+                    <div class="right-top-content">
+                        <i class="fa-sharp fa-solid fa-paper-plane p-icon"></i>
+                    </div>
+
+                    <div class="right-bottom-content">
+                        <h3 class="the">The</h3>
+                        <h3 class="idea">IDEA
+                            <span class="hunter">Hunter</span>
+                        </h3>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!--ending  Home section Section -->
+
+
+
+
+
+    <!--button section Section -->
+
+    <section style="margin-bottom: 26px;">
+        <div class="paragraph">
+            <h1 class="w">Deciding what to read next?</h1>
+            <h2 class="h">You’re in the right place. Tell us what titles or genres you’ve <br>enjoyed in the past, and
+                we’ll give you surprisingly insightful<br> recommendations</h2>
+            <h1 class="a">What are your friends reading?</h1>
+            <h2 class="t">Chances are your friends are discussing their favorite (and least favorite) books on Bookie.
+            </h2>
+        </div>
+    </section>
+    
+    <hr>
+    <Section>
+        <div
+            class="search-container"
+        >
+            <input type="text" id="searchQuery" name="searchQuery" required placeholder="Search....">
+            <button onclick="searchBooks()">Search</button>
+        </div>
+    
+        <div id="searchResults">
+
+            Search for books to see results here
+        </div>
+
+    </Section>
+    <hr>
+    <section>
+
+
+
+        <div class="button-container">
+
+            <select name="" id="op">
+                <option value="Romance">Romance</option>
+                <option value="Biography">Biography</option>
+                <option value="Science">Science</option>
+                <option value="Mystery">Mystery</option>
+                <option value="History">History</option>
+                <option value="Archaeology">Archaeology</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Legal Fiction">Legal Fiction</option>
+                <option value="Mythology">Mythology</option>
+
+
+            </select>
+
+            <!-- <select name="" id="op">
+
+                <option value="">Book Author</option>
+                <option value="">Cartoon</option>
+                <option value="">Horror</option>
+                <option value="">Mythical</option>
+                <option value="">History</option>
+                <option value="">science fiction</option>
+
+            </select> -->
+
+
+
+            <button
+                style="background-color: #d6180a; color: white; border: none; padding: 10px 20px; border-radius: 10px; font-size: 20px; cursor: pointer;"
+                onclick="FetchBooks()"><i class="fa-solid fa-magnifying-glass"></i> Find Books</button>
+
+
+
+
+
+        </div>
+
+    </section>
+    <!-- ending button section Section -->
+    <div id="category-books"
+        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; align-items: center; margin: 20px 0;"
+    >
+        Select a category click on find books to see books
+
+    </div>
+
+
+
+    <div class="sec">
+        <div class="head">
+            <P>Popular Books <i class="fa-solid fa-fire"></i>
+            </P>
+        </div>
+
+
+        <!--new  Section -->
+        <div class="main-container">
+            <div class="main-content">
+
+                <div class="container-section">
+                    <a href="stephen.html"><img src="img/img1.jpg" alt=""></a>
+
+                </div>
+
+                <div class="container-section">
+                    <a href="how.html"><img src="img/img2.jpg" alt=""></a>
+
+                </div>
+                <div class="container-section">
+                    <a href="missing.html"><img src="img/img3.jpg" alt=""></a>
+
+                </div>
+                <div class="container-section">
+                    <a href="take.html"><img src="img/img4.jpg" alt=""></a>
+
+                </div>
+                <div class="container-section">
+                    <a href="lunar.html"><img src="img/img6.jpg" alt=""></a>
+                </div>
+                <div class="container-section">
+                    <a href="memory.html"><img src="img/img7.jpg" alt=""></a>
+
+                </div>
+                <div class="container-section">
+                    <a href="devil.html"><img src="img/img8.jpg" alt=""></a>
+
+                </div>
+                <div class="container-section">
+                    <a href="black.html"><img src="img/img9.jpg" alt=""></a>
+
+                </div>
+                <div class="container-section">
+                    <a href="crime.html"><img src="img/img10.jpg" alt=""></a>
+
+                </div>
+                <div class="container-section">
+                    <a href="crack.html"><img src="img/img11.jpg" alt=""></a>
+
+                </div>
+                <div class="container-section">
+                    <a href="falls.html"><img src="img/img12.jpg" alt=""></a>
+
+                </div>
+                <div class="container-section">
+                    <a href="kathey.html"><img src="img/img13.jpg" alt=""></a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="head-1">
+        <P>History Books <i class="fa-solid fa-landmark-dome"></i>
+        </P>
+    </div>
+
+
+    <!--new  Section -->
+    <div class="new">
+        <div class="about">
+            <p class="art">
+                We scatter historical references through-out our everyday speech whether we are aware of it or not.
+                When
+                we talk about left or right-wing politics we are harking back to the French Revolution. When we
+                bemoan a
+                Spartan meal we have the ancient Greeks to blame. When we meet our Waterloo we are self-identifying
+                with
+                a bloody warmonger of average height. To be honest most of the time we can get on perfectly well
+                without
+                knowing exactly what someone means by their classical allusions – it did me no harm to spend many
+                years
+                with the vague impression that Hannibal was an elephant – but it is nice to know what is making
+                everyone
+                else nod sagely in agreement.</p>
+        </div>
+
+
+        <div class="main-container-1">
+            <div class="main-content">
+
+                <div class="container-section">
+                    <img src="img/img31.jpg" alt="">
+
+                </div>
+
+                <div class="container-section">
+                    <img src="img/img32.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img33.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img34.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img35.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img36.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img37.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img38.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img39.jpg" alt="">
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="head">
+        <P>Art Books<i class="fa-solid fa-brush"></i>
+        </P>
+    </div>
+
+
+    <!--new  Section -->
+    <div class="new">
+
+
+        <div class="main-container-2">
+
+            <div class="main-content">
+
+                <div class="container-section">
+                    <img src="img/img21.jpg" alt="">
+
+                </div>
+
+                <div class="container-section">
+                    <img src="img/img22.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img23.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img24.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img26.jpg" alt="">
+
+                </div>
+
+                <div class="container-section">
+                    <img src="img/img27.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img28.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img29.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img30.jpg" alt="">
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="about">
+            <p class="art">
+                This book is addressed to you, the student of art. I hope that it will help you to write about art
+                more
+                effectively and thus teach you, through the process of writing, how to see works of art in more
+                meaningful and lasting terms. Many of you are already effective writers; many of you may still lack
+                the
+                confidence you need to feel that you write well. If you are reading this book, you almost surely
+                find
+                the problem of writing about art a vexing one. If the visual arts expressed the same things in the
+                same
+                way as the verbal arts, then why would anyone bother to paint or sculpt or take photographs in the
+                first
+                place? Most people feel that images tend to "say" things that words can't. For them, being asked to
+                write about art is like being asked to express the inexpressible.</p>
+        </div>
+    </div>
+
+
+
+    <div class="head">
+        <P>Science Books<i class="fa-solid fa-flask"></i>
+        </P>
+    </div>
+
+
+    <!--new  Section -->
+
+    <div class="new">
+        <div class="about">
+            <p class="art">
+                We scatter historical references through-out our everyday speech whether we are aware of it or not.
+                When
+                we talk about left or right-wing politics we are harking back to the French Revolution. When we
+                bemoan a
+                Spartan meal we have the ancient Greeks to blame. When we meet our Waterloo we are self-identifying
+                with
+                a bloody warmonger of average height. To be honest most of the time we can get on perfectly well
+                without
+                knowing exactly what someone means by their classical allusions – it did me no harm to spend many
+                years
+                with the vague impression that Hannibal was an elephant – but it is nice to know what is making
+                everyone
+                else nod sagely in agreement.</p>
+        </div>
+        <div class="main-container-3">
+            <div class="main-content">
+
+                <div class="container-section">
+                    <img src="img/img51.jpg" alt="">
+
+                </div>
+
+                <div class="container-section">
+                    <img src="img/img52.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img53.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img54..jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img55.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img56.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img57.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img58.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img59.jpg" alt="">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- 
+    <div class="head">
+        <P>Horror Books<i class="fa-solid fa-skull-crossbones"></i>
+        </P>
+    </div> -->
+
+
+
+    <!-- <div class="new">
+
+
+        <div class="main-container-4">
+            <div class="main-content">
+
+                <div class="container-section">
+                    <img src="img/img71.jpg" alt="">
+
+                </div>
+
+                <div class="container-section">
+                    <img src="img/img72.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img73.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img74.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img75.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img76.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img77.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img78.jpg" alt="">
+
+                </div>
+                <div class="container-section">
+                    <img src="img/img79.jpg" alt="">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="about">
+            <p class="art">
+                American science fiction author and editor Lester del Rey wrote, "Even the devoted aficionado or
+                fan—has a hard time trying to explain what science fiction is," and the lack of a "full satisfactory
+                definition" is because "there are no easily delineated limits to science fiction."[6] According to
+                Isaac Asimov, "Science fiction can be defined as that branch of literature which deals with the
+                reaction of human beings to changes in science and technology."[7] Robert A. Heinlein wrote that "A
+                handy short definition of almost all science fiction might read: realistic speculation about
+                possible future events, based solidly on adequate knowledge of the real world, past and present, and
+                on a thorough understanding of the nature and significance of the scientific method."</p>
+        </div>
+    </div> -->
+
+
+
+
+    <!-- <div class="head">
+        <P>Mythical Books<i class="fa-solid fa-infinity"></i>
+        </P>
+    </div>
+
+
+    new  Section 
+    <div class="main-container-5">
+        <div class="main-content">
+
+            <div class="container-section">
+                <img src="img/img91.jpg" alt="">
+
+            </div>
+
+            <div class="container-section">
+                <img src="img/img92.jpg" alt="">
+
+            </div>
+            <div class="container-section">
+                <img src="img/img93.jpg" alt="">
+
+            </div>
+            <div class="container-section">
+                <img src="img/img94.jpg" alt="">
+
+            </div>
+            <div class="container-section">
+                <img src="img/img96.jpg" alt="">
+
+            </div>
+            <div class="container-section">
+                <img src="img/img97.jpg" alt="">
+
+            </div>
+            <div class="container-section">
+                <img src="img/img98.jpg" alt="">
+
+            </div>
+            <div class="container-section">
+                <img src="img/img99.jpg" alt="">
+
+            </div>
+            <div class="container-section">
+                <img src="img/img100.jpeg" alt="">
+
+            </div>
+
+        </div>
+        
+    </div> -->
+
+
+
+
+
+    <section class="footer">
+        <div class="footer-container">
+            <div class="colomn">
+
+                <p>Follow us</p>
+                <ul class="social-media-menu">
+                    <li><a href="#"><i class="fa fa-brands fa-twitter"></i> </a></li>
+
+
+                    <li><a href="#"><i class="fa fa-brands fa-facebook"></i> </a></li>
+
+                    <li><a href="#"><i class="fa fa-brands fa-google"></i></a></li>
+
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+
+
+                </ul>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html">Home</a></li>
+                <li><a href="terms.html">terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <!-- <li><a href="#">Contact</a></li> -->
+            </ul>
+
+            <ul class="contact">
+                <li>+91 9630 346084</li>
+                <li>dneha6124@gmail.com</li>
+                <li>hanuman nagar,<br>medical square,nagpur,440008</li>
+
+            </ul>
+        </div>
+
+
+    </section>
+
+
+
+
+
+</body>
+<script>
+    const url = 'http://127.0.0.1:8000/api/';
+
+    window.addEventListener('load', () => {
+        const authBtn = document.getElementById('authBtn');
+        if (localStorage.getItem('token')) {
+            authBtn.innerHTML = `<span onclick="logout()">Logout</span>`;
+        } else {
+            authBtn.innerHTML = `<a href="login.html">Login</a>`;
+        }
+
+    });
+    function logout() {
+        localStorage.removeItem('refresh');
+        localStorage.removeItem('token');
+        window.location.href = 'login.html';
+    }
+    function FetchBooks() {
+        const op = document.getElementById('op').value;
+        const section = document.getElementById('category-books');
+
+        section.innerHTML = `<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;"><h1>Loading...</h1></div>`;
+        fetch(url +'books_by_category/'+ op).then(res => res.json()).then(data => {
+            let html = '';
+            data?.books.forEach(book => {
+                html += `
+                <div>
+                <div class="container-section">
+                    <img src="${book.image_urls[0]}" alt="">
+                </div>
+                    <h2 style="max-width:150px;white-space: break-word"> ${book.title} </h2>
+                    <h3> ${book.author} </h3>
+                    <h4> ${book.publication_year} </h4>
+                    <h5> ${book.publisher} </h5>
+                </div>
+                `;
+            });
+            section.innerHTML = html;
+        });
+
+    }
+    function searchBooks() {
+        const searchQuery = document.getElementById('searchQuery').value;
+        const section = document.getElementById('searchResults');
+        section.innerHTML = `<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;"><h1>Loading...</h1></div>`;
+        fetch(url +"search/"+ searchQuery).then(res => res.json()).then(data => {
+            let html = '';
+            if (data?.books.length === 0) {
+                section.innerHTML = `<h1>No results found</h1>`;
+                return
+            }
+            data?.books.forEach(book => {
+                html += `
+                <div>
+                <div class="container-section">
+                    <img src="${book.image_urls[0]}" alt="">
+                </div>
+                    <h2 style="max-width:150px;white-space: break-word"> ${book.title} </h2>
+                    <h3> ${book.author} </h3>
+                    <h4> ${book.publication_year} </h4>
+                    <h5> ${book.publisher} </h5>
+                </div>
+                `;
+            });
+            section.innerHTML = html;
+        });
+
+    }
+</script>
+
+<script src="./script/checkAuth.js"></script>
+
+</html>
